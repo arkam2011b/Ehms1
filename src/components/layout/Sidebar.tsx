@@ -13,6 +13,7 @@ import {
 import {
   BarChart3,
   Calendar,
+  ChevronLeft,
   CreditCard,
   Home,
   Hotel,
@@ -183,7 +184,9 @@ const Sidebar = ({
           onClick={toggleCollapse}
           className="w-full"
         >
-          <ChevronLeft className={cn("h-4 w-4", isCollapsed && "rotate-180")} />
+          <CustomChevronLeft
+            className={cn("h-4 w-4", isCollapsed && "rotate-180")}
+          />
         </Button>
       </div>
     </div>
@@ -192,7 +195,7 @@ const Sidebar = ({
 
 export default Sidebar;
 
-function ChevronLeft(props: React.SVGProps<SVGSVGElement>) {
+function CustomChevronLeft(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
